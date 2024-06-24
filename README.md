@@ -1,29 +1,20 @@
-# NETZ-XRAY
-Installasi Netz-Xray Multi Port 443 & 80
+# Installer Netz-Xray
 
-# OS Supported & Requirements
-- Debian 9
-- Debian 10 (**Rekomendasi**)
-- Ubuntu 18
-- Ubuntu 20
-- RAM Minimal 1GB (Max Akun 8-12)
-- CPU Minimal 1 (2 Lebih bagus/Lebih cepet installnya)
-
-# Feature
+- XRAY ONLY
+- DEBIAN 10 / Ubuntu 20 LTS ONLY
+- CPU MIN 1 CORE
+- RAM 1GB
 - VMESS WS TLS 443
-- VMESS WS NON TLS 80
+- VMESS WS NON TLS 80 (Sekarang Menggunakan Dynamic Path)
 - VMESS GRPC 443
 - VLESS WS TLS 443
 - VLESS GRPC 443
-- TROJAN WS TLS 443
-- TROJAN GRPC 443
-
-# Cara Daftarin IPnya
-1. Harus punya akun github
-2. Fork & Stars Repo Ini
-3. Edit Di Repo Kamu File register.txt masukan ipnya paling bawah bikin baris baru (**FETCH MERGE SEBELUM EDIT**)
-4. Lalu pergi ke tab pull request kamu submit aja ke repo utamaku
-5. Langsung diterima (Kalo ga sibuk)
+- TROJAN/TROJAN GO WS TLS 443
+- TROJAN/TROJAN GO GRPC 443
+- SHADOWSOCKS WS 443
+- SHADOWSOCKS GRPC 443
+- SHADOWSOCKS 2022 WS 443
+- SHADOWSOCKS 2022 GRPC 443
 
 # Cara Insttallnya
 1. VPS baru dibikin (hanya bisa untuk KVM)
@@ -38,11 +29,11 @@ Installasi Netz-Xray Multi Port 443 & 80
 3. Login VPS kamu pakai **root** Ya
 4. Ini kode instalasinya tinggal paste aja
 ```
-sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt upgrade && apt install wget && apt install curl && apt install screen && wget -q https://raw.githubusercontent.com/adisubagja/AutoScriptXray/master/adi.sh && chmod +x adi.sh && screen -S netzinstall ./adi.sh
+rm -rf setup.sh && rm -rf adi.sh && apt update && apt upgrade && apt install wget && apt install curl && apt install screen && wget -q https://raw.githubusercontent.com/adisubagja/AutoScriptXray/master/adi.sh && chmod +x adi.sh && screen -S netzinstall ./adi.sh
 ```
 **ALTERNATIF KALO GAGAL**
 ```
-sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt upgrade && apt install wget && apt install curl && apt install screen && wget -q https://cdn.statically.io/gh/adisubagja/autoscriptxray/master/adi.sh && chmod +x adi.sh && screen -S netzinstall ./adi.sh
+rm -rf setup.sh && rm -rf adi.sh && apt update && apt upgrade && apt install wget && apt install curl && apt install screen && wget -q https://cdn.statically.io/gh/adisubagja/autoscriptxray/master/adi.sh && chmod +x adi.sh && screen -S netzinstall ./adi.sh
 ```
 5. Masukin domain kamu terus enter deh
 6. Tunggu ampe selesai nanti reboot sendiri
@@ -62,13 +53,33 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
 - Question : Bang gRPC ganyala?
 - Answer : Pastiin domain kamu bukan wildcard kalo masih ganyala cek cloudflare kamu ke tab Network ONkan gRPC & WebSocketnya
 
-
-# Laporin Erorr
+# Kontak Admin
 - Telegram : https://t.me/adisubagja
-- Telegram Group : https://t.me/+qmkQdAxx6_MxZjll
+
+# Catatan & Riwayat
+1. Script ini dulunya GRATIS !
+2. Sekarang Installasi Minimal Donasi Rp.20.000 Kenapa bang jadi berbayar ? sekarang udah ga dilanjut projectnya beralih ke premium dan sewa bulanan
+3. Jika kalian ingin menginstall ini secara paksa hubungi admin ! screenshoot donasi kalian kirim IPnya kudaftarin langsung (1 IP)
+4. Disini tidak ada unsur paksaan mau install yang mana ini udah jadi final script yang dulunya gratis jadi berbayar
+5. Terimakasih atas pengertiannya !
+
+# Note Tambahan
+Ketika kalian install script ini !
+IP yang kalian daftarkan itu permanen bisa menggunakan script ini
+Tetapi jika kalian IPnya berubah maka kalian tidak bisa menggunakannya lagi
+Garansi dari admin cuma 1x pergantian dalam jangka waktu 7 hari
+Sisanya kalian harus donasi ulang untuk mendaftarkan IP kalian yang baru
+
+# Opini Pribadi
+Script ini sangat cocok buat kebutuhan pribadi !
+Jika kalian ingin untuk berjualan cobalah sewa script premium dari saya !
 
 # Donasi / Support
 - Qris
 ![qris](https://github.com/adisubagja/AutoScriptXray/blob/master/img/qris.jpg?raw=true)
 - Dana/Ovo/Gopay
   - 082113695382
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/adisubagja/AutoScriptXray.svg)](https://starchart.cc/adisubagja/AutoScriptXray)
